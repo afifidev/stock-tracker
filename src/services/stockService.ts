@@ -135,7 +135,6 @@ export const getStockData = async (symbol: string): Promise<{
     const predictions = predictFuturePrices(
       targetPrices,
       correlationData[0] || targetPrices, // Fallback to target prices if SPY data is missing
-      correlationData.slice(1),
       5
     );
 
